@@ -15,6 +15,7 @@ const isLiked = (id) => {
   return likedPostsId?.length && !!likedPostsId.includes(id);
 };
 
+// like posts solved
 const addToLiked = (id) => {
     likedPostsId.push(id); 
     showPosts(posts);
@@ -26,6 +27,7 @@ const reportPost = (id) => {
     showPosts(remainingPosts);
 };
 
+// description read more solved
 const displayContent = (text) => {
     return text.length < 30 ? text : text.slice(0, 30) + "<span class='fw-bold'>... read more</span>";
 };
@@ -51,6 +53,7 @@ const switchTab = (id) => {
 };
 
 const createPost = (post) => {
+  // profile picture solved
   const image = post.image;
   const userImage = post.userImage;
     const div = document.createElement( "article" );
@@ -121,7 +124,8 @@ const createPost = (post) => {
                   <div class="post__description">
                     <small>
                       <a class="post__name--underline" href="#">
-                           ${post.comments[]?.user}
+                      // comment solved
+                           ${post.comments[0]?.user}
                       </a>
                       ${post.comments[0]?.text}
                     </small>
@@ -144,6 +148,7 @@ const showPosts = (posts) => {
 };
 
 const displayLikedPosts = () => {
+  // display liked post solved
   document.getElementById("liked").innerHTML = "";
     const likedPosts = getLikedPosts();
     likedPosts.forEach((post) => {
@@ -155,6 +160,7 @@ const displayLikedPosts = () => {
 };
 
 const displayReportedPosts = () => {
+  // display reported post solved
   document.getElementById("reported").innerHTML = "";
     const reportedPosts = getReportedPosts();
     reportedPosts.forEach((post) => {
