@@ -103,7 +103,7 @@ const createPost = (post) => {
                   </button>
                 </div>
 
-                <div class="post__content">${displayContent(pos.description)}</div>
+                <div class="post__content">${displayContent(post.description)}</div>
 
                 <div class="post__infos">
                   <div class="post__likes">
@@ -121,7 +121,7 @@ const createPost = (post) => {
                   <div class="post__description">
                     <small>
                       <a class="post__name--underline" href="#">
-                           ${post.comments[0]?.user}
+                           ${post.comments[]?.user}
                       </a>
                       ${post.comments[0]?.text}
                     </small>
